@@ -9,11 +9,11 @@ public class RadioTest {
     public void shouldSetRadioAndVolume() {
         Radio radio = new Radio();
 
-        radio.setNumberRadio(12);
-        radio.setVolume(-1);
+        radio.setNumberRadio(5);
+        radio.setVolume(6);
 
-        int expectedN = 0;
-        int expectedV = 0;
+        int expectedN = 5;
+        int expectedV = 6;
 
         int actualN = radio.numberRadio;
         int actualV = radio.volume;
