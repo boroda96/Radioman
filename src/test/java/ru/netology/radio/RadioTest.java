@@ -12,10 +12,11 @@ public class RadioTest {
         radio.setNumberRadio(10);
 
         int expected = 0;
-        int actual = radio.numberRadio;
+        int actual = radio.getNumberRadio();
 
         Assertions.assertEquals(expected, actual);
-        }
+    }
+
     @Test
     public void shouldSetRadio5() {
         Radio radio = new Radio();
@@ -23,10 +24,11 @@ public class RadioTest {
         radio.setNumberRadio(5);
 
         int expected = 5;
-        int actual = radio.numberRadio;
+        int actual = radio.getNumberRadio();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetRadio0() {
         Radio radio = new Radio();
@@ -34,7 +36,7 @@ public class RadioTest {
         radio.setNumberRadio(-1);
 
         int expected = 0;
-        int actual = radio.numberRadio;
+        int actual = radio.getNumberRadio();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -51,6 +53,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldNextNumberRadio1() {
         Radio radio = new Radio();
@@ -62,6 +65,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldNextNumberRadio2() {
         Radio radio = new Radio();
@@ -85,6 +89,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldPrevNumberRadio8() {
         Radio radio = new Radio();
@@ -108,6 +113,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldNextVolume1() {
         Radio radio = new Radio();
@@ -119,6 +125,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldNextVolume10() {
         Radio radio = new Radio();
@@ -142,6 +149,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldPrevVolume0() {
         Radio radio = new Radio();
@@ -153,6 +161,7 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
+
     @Test
     public void shouldPrevVolume00() {
         Radio radio = new Radio();

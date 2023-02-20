@@ -1,10 +1,15 @@
 package ru.netology.radio;
 
 public class Radio {
-    public int numberRadio;
+    private int numberRadio;
+    private int volume;
 
     public int getNumberRadio() {
         return numberRadio;
+    }
+
+    public int getVolume() {
+        return volume;
     }
 
     public void setNumberRadio(int newNumberRadio) {
@@ -14,29 +19,7 @@ public class Radio {
         if (newNumberRadio > 9) {
             return;
         }
-        numberRadio = newNumberRadio;
-    }
-
-    public void nextNumberRadio() {
-        if (numberRadio < 9) {
-            numberRadio++;
-        } else {
-            numberRadio = 0;
-        }
-    }
-
-    public void prevNumberRadio() {
-        if (numberRadio > 0) {
-            numberRadio--;
-        } else {
-            numberRadio = 9;
-        }
-    }
-
-    public int volume;
-
-    public int getVolume() {
-        return volume;
+        this.numberRadio = newNumberRadio;
     }
 
     public void setVolume(int newVolume) {
@@ -46,18 +29,38 @@ public class Radio {
         if (newVolume > 10) {
             newVolume = 10;
         }
-        volume = newVolume;
+        this.volume = newVolume;
+    }
+
+    public void nextNumberRadio() {
+        if (numberRadio < 9) {
+            numberRadio++;
+        } else {
+            setNumberRadio(0);
+        }
+    }
+
+    public void prevNumberRadio() {
+        if (numberRadio > 0) {
+            numberRadio--;
+        } else {
+            setNumberRadio(9);
+        }
     }
 
     public void nextVolume() {
         if (volume < 10) {
             volume++;
+        } else {
+            setVolume(10);
         }
     }
 
     public void prevVolume() {
         if (volume > 0) {
             volume--;
+        } else {
+            setVolume(0);
         }
     }
 }
