@@ -14,10 +14,12 @@ public class RadioTest {
         Assertions.assertEquals(0, radio.getNumberRadio());
 
     }
+
     @Test
-    public void shouldSetDefaultRadio(){
-        Assertions.assertEquals(9,9);
+    public void shouldSetDefaultRadio() {
+        Assertions.assertEquals(9, 9);
     }
+
     @Test
     public void shouldSetRadio10() {
 
@@ -108,8 +110,8 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldDefaultVolume(){
-        Assertions.assertEquals(100,100);
+    public void shouldDefaultVolume() {
+        Assertions.assertEquals(100, 100);
 
     }
 
@@ -151,7 +153,7 @@ public class RadioTest {
         radio.setVolume(101);
         radio.prevVolume();
 
-        int exp =99;
+        int exp = 99;
         int act = radio.getVolume();
 
         Assertions.assertEquals(exp, act);
@@ -178,7 +180,6 @@ public class RadioTest {
 
         Assertions.assertEquals(exp, act);
     }
-
 
 
 }

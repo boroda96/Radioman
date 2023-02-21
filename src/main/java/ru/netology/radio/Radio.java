@@ -3,81 +3,95 @@ package ru.netology.radio;
 public class Radio {
     private int maxNumberRadio = 9;
     private int minNumberRadio = 0;
-    private int numberRadio = minNumberRadio;
-    private int maxVolume = 100;
-    private int minVolume = 0;
-    private int volume = minVolume;
+    private int numberRadio;
+    private int maxVolume;
+    private int minVolume;
+    private int volume;
 
     public Radio(int number) {
-        maxNumberRadio = minNumberRadio + number -1;
+        this.numberRadio = this.minNumberRadio;
+        this.maxVolume = 100;
+        this.minVolume = 0;
+        this.volume = this.minVolume;
+        this.maxNumberRadio = this.minNumberRadio + number - 1;
     }
-    public Radio() {
 
+    public Radio() {
+        this.numberRadio = this.minNumberRadio;
+        this.maxVolume = 100;
+        this.minVolume = 0;
+        this.volume = this.minVolume;
     }
 
     public int getNumberRadio() {
-        return numberRadio;
+        return this.numberRadio;
     }
-    public int getMaxNumberRadio(){
-        return  maxNumberRadio;
+
+    public int getMaxNumberRadio() {
+        return this.maxNumberRadio;
     }
-    public int getMinNumberRadio(){
-        return minNumberRadio;
+
+    public int getMinNumberRadio() {
+        return this.minNumberRadio;
     }
 
     public int getVolume() {
-        return volume;
+        return this.volume;
     }
 
-      public void setNumberRadio(int newNumberRadio) {
-        if (newNumberRadio < minNumberRadio) {
-            return;
+    public void setNumberRadio(int newNumberRadio) {
+        if (newNumberRadio >= this.minNumberRadio) {
+            if (newNumberRadio <= this.maxNumberRadio) {
+                this.numberRadio = newNumberRadio;
+            }
         }
-        if (newNumberRadio > maxNumberRadio) {
-            return;
-        }
-        this.numberRadio = newNumberRadio;
     }
 
     public void setVolume(int newVolume) {
-        if (newVolume < minVolume) {
-            newVolume = minVolume;
+        if (newVolume < this.minVolume) {
+            newVolume = this.minVolume;
         }
-        if (newVolume > maxVolume) {
-            newVolume = maxVolume;
+
+        if (newVolume > this.maxVolume) {
+            newVolume = this.maxVolume;
         }
+
         this.volume = newVolume;
     }
 
     public void nextNumberRadio() {
-        if (numberRadio < maxNumberRadio) {
-            numberRadio++;
+        if (this.numberRadio < this.maxNumberRadio) {
+            ++this.numberRadio;
         } else {
-            setNumberRadio(minNumberRadio);
+            this.setNumberRadio(this.minNumberRadio);
         }
+
     }
 
     public void prevNumberRadio() {
-        if (numberRadio > minNumberRadio) {
-            numberRadio--;
+        if (this.numberRadio > this.minNumberRadio) {
+            --this.numberRadio;
         } else {
-            setNumberRadio(maxNumberRadio);
+            this.setNumberRadio(this.maxNumberRadio);
         }
+
     }
 
     public void nextVolume() {
-        if (volume < maxVolume) {
-            volume++;
+        if (this.volume < this.maxVolume) {
+            ++this.volume;
         } else {
-            setVolume(maxVolume);
+            this.setVolume(this.maxVolume);
         }
+
     }
 
     public void prevVolume() {
-        if (volume > minVolume) {
-            volume--;
+        if (this.volume > this.minVolume) {
+            --this.volume;
         } else {
-            setVolume(minVolume);
+            this.setVolume(this.minVolume);
         }
+
     }
 }
