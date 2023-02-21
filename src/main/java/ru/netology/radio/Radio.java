@@ -1,66 +1,83 @@
 package ru.netology.radio;
 
 public class Radio {
-    private int numberRadio;
-    private int volume;
+    private int maxNumberRadio = 9;
+    private int minNumberRadio = 0;
+    private int numberRadio = minNumberRadio;
+    private int maxVolume = 100;
+    private int minVolume = 0;
+    private int volume = minVolume;
+
+    public Radio(int number) {
+        maxNumberRadio = minNumberRadio + number -1;
+    }
+    public Radio() {
+
+    }
 
     public int getNumberRadio() {
         return numberRadio;
+    }
+    public int getMaxNumberRadio(){
+        return  maxNumberRadio;
+    }
+    public int getMinNumberRadio(){
+        return minNumberRadio;
     }
 
     public int getVolume() {
         return volume;
     }
 
-    public void setNumberRadio(int newNumberRadio) {
-        if (newNumberRadio < 0) {
+      public void setNumberRadio(int newNumberRadio) {
+        if (newNumberRadio < minNumberRadio) {
             return;
         }
-        if (newNumberRadio > 9) {
+        if (newNumberRadio > maxNumberRadio) {
             return;
         }
         this.numberRadio = newNumberRadio;
     }
 
     public void setVolume(int newVolume) {
-        if (newVolume < 0) {
-            newVolume = 0;
+        if (newVolume < minVolume) {
+            newVolume = minVolume;
         }
-        if (newVolume > 10) {
-            newVolume = 10;
+        if (newVolume > maxVolume) {
+            newVolume = maxVolume;
         }
         this.volume = newVolume;
     }
 
     public void nextNumberRadio() {
-        if (numberRadio < 9) {
+        if (numberRadio < maxNumberRadio) {
             numberRadio++;
         } else {
-            setNumberRadio(0);
+            setNumberRadio(minNumberRadio);
         }
     }
 
     public void prevNumberRadio() {
-        if (numberRadio > 0) {
+        if (numberRadio > minNumberRadio) {
             numberRadio--;
         } else {
-            setNumberRadio(9);
+            setNumberRadio(maxNumberRadio);
         }
     }
 
     public void nextVolume() {
-        if (volume < 10) {
+        if (volume < maxVolume) {
             volume++;
         } else {
-            setVolume(10);
+            setVolume(maxVolume);
         }
     }
 
     public void prevVolume() {
-        if (volume > 0) {
+        if (volume > minVolume) {
             volume--;
         } else {
-            setVolume(0);
+            setVolume(minVolume);
         }
     }
 }
