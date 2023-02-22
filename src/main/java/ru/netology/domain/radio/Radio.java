@@ -1,11 +1,11 @@
 package ru.netology.domain.radio;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+
+
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
+
 @NoArgsConstructor
-@Data
+
 public class Radio {
     private int maxNumberRadio = 9;
     private int minNumberRadio = 0;

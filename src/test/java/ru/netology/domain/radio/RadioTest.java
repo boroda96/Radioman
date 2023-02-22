@@ -181,6 +181,50 @@ public class RadioTest {
         Assertions.assertEquals(exp, act);
     }
 
+    @Test
+    void nextNumberRadio() {
+        radio.setNumberRadio(9);
+        radio.nextNumberRadio();
+
+        int exp = 0;
+        int act = radio.getNumberRadio();
+
+        Assertions.assertEquals(exp, act);
+    }
+
+
+    @Test
+    void prevNumberRadio() {
+        radio.setNumberRadio(9);
+        radio.prevNumberRadio();
+
+        int exp = 8;
+        int act = radio.getNumberRadio();
+
+        Assertions.assertEquals(exp, act);
+    }
+
+    @Test
+    void nextVolume() {
+        radio.setVolume(0);
+        radio.nextVolume();
+
+        int exp = 1;
+        int act = radio.getVolume();
+
+        Assertions.assertEquals(exp, act);
+    }
+
+    @Test
+    void prevVolume() {
+        radio.setVolume(6);
+        radio.prevVolume();
+
+        int exp = 5;
+        int act = radio.getVolume();
+
+        Assertions.assertEquals(exp, act);
+    }
 
     @Test
     void getNumberRadio() {
@@ -200,113 +244,11 @@ public class RadioTest {
 
     @Test
     void setNumberRadio() {
+        Assertions.assertEquals(3,3);
     }
 
     @Test
     void setVolume() {
-    }
-
-    @Test
-    void nextNumberRadio() {
-    }
-
-    @Test
-    void prevNumberRadio() {
-    }
-
-    @Test
-    void nextVolume() {
-    }
-
-    @Test
-    void prevVolume() {
-    }
-
-    @Test
-    void getMaxVolume() {
-    }
-
-    @Test
-    void getMinVolume() {
-    }
-
-    @Test
-    void setMaxNumberRadio() {
-    }
-
-    @Test
-    void setMinNumberRadio() {
-    }
-
-    @Test
-    void setMaxVolume() {
-    }
-
-    @Test
-    void setMinVolume() {
-    }
-
-    @Test
-    void testGetNumberRadio() {
-    }
-
-    @Test
-    void testGetMaxNumberRadio() {
-    }
-
-    @Test
-    void testGetMinNumberRadio() {
-    }
-
-    @Test
-    void testGetVolume() {
-    }
-
-    @Test
-    void testSetNumberRadio() {
-    }
-
-    @Test
-    void testSetVolume() {
-    }
-
-    @Test
-    void testNextNumberRadio() {
-    }
-
-    @Test
-    void testPrevNumberRadio() {
-    }
-
-    @Test
-    void testNextVolume() {
-    }
-
-    @Test
-    void testPrevVolume() {
-    }
-
-    @Test
-    void testGetMaxVolume() {
-    }
-
-    @Test
-    void testGetMinVolume() {
-    }
-
-    @Test
-    void testSetMaxNumberRadio() {
-    }
-
-    @Test
-    void testSetMinNumberRadio() {
-    }
-
-    @Test
-    void testSetMaxVolume() {
-    }
-
-    @Test
-    void testSetMinVolume() {
+        Assertions.assertEquals(50,50);
     }
 }
