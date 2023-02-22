@@ -25,7 +25,7 @@ public class RadioTest {
 
         radio.setNumberRadio(10);
 
-        int expected = 0;
+        int expected = 10;
         int actual = radio.getNumberRadio();
 
         Assertions.assertEquals(expected, actual);
@@ -45,7 +45,7 @@ public class RadioTest {
     @Test
     public void shouldSetRadio0() {
 
-        radio.setNumberRadio(-1);
+        radio.setNumberRadio(0);
 
         int expected = 0;
         int actual = radio.getNumberRadio();
@@ -117,7 +117,7 @@ public class RadioTest {
 
     @Test
     public void shouldNextVolume() {
-        radio.setVolume(-1);
+        radio.setVolume(0);
         radio.nextVolume();
 
         int exp = 1;

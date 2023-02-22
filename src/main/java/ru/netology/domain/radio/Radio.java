@@ -1,11 +1,9 @@
 package ru.netology.domain.radio;
 
-
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 
 @NoArgsConstructor
-
+@Data
 public class Radio {
     private int maxNumberRadio = 9;
     private int minNumberRadio = 0;
@@ -16,42 +14,6 @@ public class Radio {
 
     public Radio(int number) {
         this.maxNumberRadio = this.minNumberRadio + number - 1;
-    }
-
-    public int getNumberRadio() {
-        return this.numberRadio;
-    }
-
-    public int getMaxNumberRadio() {
-        return this.maxNumberRadio;
-    }
-
-    public int getMinNumberRadio() {
-        return this.minNumberRadio;
-    }
-
-    public int getVolume() {
-        return this.volume;
-    }
-
-    public void setNumberRadio(int newNumberRadio) {
-        if (newNumberRadio >= this.minNumberRadio) {
-            if (newNumberRadio <= this.maxNumberRadio) {
-                this.numberRadio = newNumberRadio;
-            }
-        }
-    }
-
-    public void setVolume(int newVolume) {
-        if (newVolume < this.minVolume) {
-            newVolume = this.minVolume;
-        }
-
-        if (newVolume > this.maxVolume) {
-            newVolume = this.maxVolume;
-        }
-
-        this.volume = newVolume;
     }
 
     public void nextNumberRadio() {
