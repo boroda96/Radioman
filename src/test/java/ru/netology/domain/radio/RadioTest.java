@@ -182,4 +182,131 @@ public class RadioTest {
     }
 
 
+    @Test
+    void getNumberRadio() {
+    }
+
+    @Test
+    void getMaxNumberRadio() {
+    }
+
+    @Test
+    void getMinNumberRadio() {
+    }
+
+    @Test
+    void getVolume() {
+    }
+
+    @Test
+    void setNumberRadio() {
+    }
+
+    @Test
+    void setVolume() {
+    }
+
+    @Test
+    void nextNumberRadio() {
+    }
+
+    @Test
+    void prevNumberRadio() {
+    }
+
+    @Test
+    void nextVolume() {
+    }
+
+    @Test
+    void prevVolume() {
+    }
+
+    @Test
+    void getMaxVolume() {
+    }
+
+    @Test
+    void getMinVolume() {
+    }
+
+    @Test
+    void setMaxNumberRadio() {
+    }
+
+    @Test
+    void setMinNumberRadio() {
+    }
+
+    @Test
+    void setMaxVolume() {
+    }
+
+    @Test
+    void setMinVolume() {
+    }
+
+    @Test
+    void testGetNumberRadio() {
+    }
+
+    @Test
+    void testGetMaxNumberRadio() {
+    }
+
+    @Test
+    void testGetMinNumberRadio() {
+    }
+
+    @Test
+    void testGetVolume() {
+    }
+
+    @Test
+    void testSetNumberRadio() {
+    }
+
+    @Test
+    void testSetVolume() {
+    }
+
+    @Test
+    void testNextNumberRadio() {
+    }
+
+    @Test
+    void testPrevNumberRadio() {
+    }
+
+    @Test
+    void testNextVolume() {
+    }
+
+    @Test
+    void testPrevVolume() {
+    }
+
+    @Test
+    void testGetMaxVolume() {
+    }
+
+    @Test
+    void testGetMinVolume() {
+    }
+
+    @Test
+    void testSetMaxNumberRadio() {
+    }
+
+    @Test
+    void testSetMinNumberRadio() {
+    }
+
+    @Test
+    void testSetMaxVolume() {
+    }
+
+    @Test
+    void testSetMinVolume() {
+    }
 }
