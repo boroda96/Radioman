@@ -1,4 +1,4 @@
-package ru.netology.radio;
+package ru.netology.domain.radio;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -150,7 +150,7 @@ public class RadioTest {
 
     @Test
     public void shouldPrevVolume() {
-        radio.setVolume(101);
+        radio.setVolume(100);
         radio.prevVolume();
 
         int exp = 99;
