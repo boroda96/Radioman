@@ -2,8 +2,11 @@ package ru.netology.domain.radio;
 
 import lombok.*;
 
+
+@Getter
 @NoArgsConstructor
-@Data
+
+
 public class Radio {
     private int maxNumberRadio = 9;
     private int minNumberRadio = 0;
@@ -12,44 +15,59 @@ public class Radio {
     private int minVolume = 0;
     private int volume = minVolume;
 
-    public Radio(int number) {
-        this.maxNumberRadio = this.minNumberRadio + number - 1;
+   public Radio(int number) {
+        maxNumberRadio = minNumberRadio + number - 1;
+    }
+
+    public void setNumberRadio(int newNumberRadio) {
+        if (newNumberRadio < minNumberRadio) {
+            return;
+        }
+        if (newNumberRadio > maxNumberRadio) {
+            return;
+        }
+        this.numberRadio = newNumberRadio;
+    }
+
+    public void setVolume(int newVolume) {
+        if (newVolume < minVolume) {
+            newVolume = minVolume;
+        }
+        if (newVolume > maxVolume) {
+            newVolume = maxVolume;
+        }
+        this.volume = newVolume;
     }
 
     public void nextNumberRadio() {
-        if (this.numberRadio < this.maxNumberRadio) {
-            ++this.numberRadio;
+        if (numberRadio < maxNumberRadio) {
+            numberRadio++;
         } else {
-            this.setNumberRadio(this.minNumberRadio);
+            setNumberRadio(minNumberRadio);
         }
-
     }
 
     public void prevNumberRadio() {
-        if (this.numberRadio > this.minNumberRadio) {
-            --this.numberRadio;
+        if (numberRadio > minNumberRadio) {
+            numberRadio--;
         } else {
-            this.setNumberRadio(this.maxNumberRadio);
+            setNumberRadio(maxNumberRadio);
         }
-
     }
 
     public void nextVolume() {
-        if (this.volume < this.maxVolume) {
-            ++this.volume;
+        if (volume < maxVolume) {
+            volume++;
         } else {
-            this.setVolume(this.maxVolume);
+            setVolume(maxVolume);
         }
-
     }
 
     public void prevVolume() {
-        if (this.volume > this.minVolume) {
-            --this.volume;
+        if (volume > minVolume) {
+            volume--;
         } else {
-            this.setVolume(this.minVolume);
+            setVolume(minVolume);
         }
-
     }
-
 }
